@@ -18,6 +18,16 @@ def add_todo():
         db.session.commit()
     return redirect(url_for('index'))
 
+
+@app.route('/edit/<int:todo_id>', methods=['POST'])
+def edit_todo(todo_id):
+    todo = Todo.query.get_or_404(todo_id)
+    title = request.form.get('title')
+    if title:
+        todo.title = title
+        db.session.commit()
+    return redirect(url_for('index'))
+
 @app.route('/toggle/<int:todo_id>')
 def toggle_todo(todo_id):
     todo = Todo.query.get_or_404(todo_id)

@@ -40,3 +40,12 @@ gunicorn -w 4 -b 0.0.0.0:8000 app.routes:app
 ```
 
 This will serve the application on port 8000 using 4 worker processes.
+
+## Running tests
+
+Install `pytest` and run the suite:
+
+```bash
+pip install pytest
+pytest
+```
