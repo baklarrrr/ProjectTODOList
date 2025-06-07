@@ -9,6 +9,7 @@
 <body class="p-4">
   <h1 class="mb-4">Todo List</h1>
   <form action="{{ url_for('add_todo') }}" method="post" class="mb-3">
+    {{ csrf_token() }}
     <div class="input-group">
       <input type="text" name="title" class="form-control" placeholder="New task" required>
       <button class="btn btn-primary" type="submit">Add</button>
