@@ -41,6 +41,7 @@ gunicorn -w 4 -b 0.0.0.0:8000 app.routes:app
 
 This will serve the application on port 8000 using 4 worker processes.
 
+<<<<<<< codex/add-tests-for-endpoints-with-pytest
 ## Running tests
 
 Install `pytest` and run the suite:
@@ -49,3 +50,8 @@ Install `pytest` and run the suite:
 pip install pytest
 pytest
 ```
+=======
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+>>>>>>> main
