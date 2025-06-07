@@ -1,3 +1,14 @@
+<<<<<<< codex/add-tests-for-endpoints-with-pytest
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# SQLite database
+*.db
+
+# pytest cache
+.pytest_cache/
+=======
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -197,4 +208,5 @@ cython_debug/
 # Local database files
 *.db
 *.sqlite
-*.sqlite3
+*.sqlite
+

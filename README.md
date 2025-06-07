@@ -4,7 +4,7 @@ This is a simple cross-platform Todo List web application built with Flask and S
 
 ## Features
 
-- Add, complete, and delete tasks
+- Add, edit, complete, and delete tasks
 - Data stored locally using SQLite
 - Minimal Bootstrap-based UI
 
@@ -41,6 +41,17 @@ gunicorn -w 4 -b 0.0.0.0:8000 app.routes:app
 
 This will serve the application on port 8000 using 4 worker processes.
 
+<<<<<<< codex/add-tests-for-endpoints-with-pytest
+## Running tests
+
+Install `pytest` and run the suite:
+
+```bash
+pip install pytest
+pytest
+```
+=======
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+>>>>>>> main
