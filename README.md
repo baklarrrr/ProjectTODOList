@@ -4,7 +4,7 @@ This is a simple cross-platform Todo List web application built with Flask and S
 
 ## Features
 
-- Add, complete, and delete tasks
+- Add, edit, complete, and delete tasks
 - Data stored locally using SQLite
 - Minimal Bootstrap-based UI
 

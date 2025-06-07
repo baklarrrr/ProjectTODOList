@@ -30,7 +30,7 @@ def test_edit_todo(client):
     response = client.post(f'/edit/{todo_id}', data={'title': 'New'}, follow_redirects=True)
     assert response.status_code == 200
     with app.app_context():
-        updated = Todo.query.get(todo_id)
+        updated = db.session.get(Todo, todo_id)
         assert updated.title == 'New'
 
 def test_toggle_todo(client):
@@ -42,7 +42,7 @@ def test_toggle_todo(client):
     response = client.get(f'/toggle/{todo_id}', follow_redirects=True)
     assert response.status_code == 200
     with app.app_context():
-        toggled = Todo.query.get(todo_id)
+        toggled = db.session.get(Todo, todo_id)
         assert toggled.completed
 
 def test_delete_todo(client):
@@ -54,4 +54,4 @@ def test_delete_todo(client):
     response = client.get(f'/delete/{todo_id}', follow_redirects=True)
     assert response.status_code == 200
     with app.app_context():
-        assert Todo.query.get(todo_id) is None
+        assert db.session.get(Todo, todo_id) is None
